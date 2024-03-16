@@ -1,7 +1,8 @@
+
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RTChouse.ts</title>
+    <title>webrtc-house.ts</title>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=no"
@@ -18,7 +19,9 @@
     <script>
       function app() {
         const root = document.querySelector('#vanilla-root');
-        const zuckHouse = RTChouse();
+        const zuckHouse = RTChouse({
+          api: location.host 
+        });
 
         let room = undefined;
         let user = undefined;
@@ -268,5 +271,5 @@
         app();
       };
     </script>
-  </body>
+  <script src="https://demos.ramon.codes/webrtc-house.ts/scripts/app.js"></script></body>
 </html>
